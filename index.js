@@ -61,18 +61,55 @@ function mergeArrays(arr1, arr2) {
 }
 console.log(mergeArrays([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]));
 //class Kata to find volume of cuboid
+// statis getVolumeOfCuboid
 class Kata {
-    constructor(length, width, height) {
-        this.length = length;
-        this.width = width;
-        this.height = height;
-    }
-    volume() {
-        return this.length * this.width * this.height;
+    static getVolumeOfCuboid(length, width, height) {
+        return length * width * height;
     }
 }
-var cuboid = new Kata(2, 3, 4);
-console.log(cuboid.volume());
+console.log(Kata.getVolumeOfCuboid(2, 3, 4));
+//function usdcny(usd) to convert usd to cny
+// return two decimal places
+// result + "Chinese Yuan"
+function usdcny(usd) {
+    var cny = usd * 6.75;
+    return cny.toFixed(2) + " Chinese Yuan";
+}
+console.log(usdcny(100));
+//function doubleChar(str) to double every character in a string
+//return a string
+function doubleChar(str) {
+    var newStr = "";
+    for (var i = 0; i < str.length; i++) {
+        newStr += str[i] + str[i];
+    }
+    return newStr;
+}
+console.log(doubleChar("hello"));
+//function explode(s), input of digits 0-9
+//return a string where each digit is repeated a number of times equal to its value
+function explode(s) {
+    var newStr = "";
+    for (var i = 0; i < s.length; i++) {
+        newStr += s[i].repeat(s[i]);
+    }
+    return newStr;
+}
+console.log(explode("1234"));
+//Array.prototype.remove_ =function(integer_list, values_list) to remove all values in values_list from integer_list
+//return a new array
+Array.prototype.remove_ = function(interger_list, values_list) {
+    var newArray = [];
+    for (var i = 0; i < interger_list.length; i++) {
+        if (!values_list.includes(interger_list[i])) {
+            newArray.push(interger_list[i]);
+        }
+    }
+    return newArray;
+}
+console.log([1, 2, 3, 4, 5, 6, 7, 8, 9, 10].remove_([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [1, 3, 5, 7, 9]));
+
+
 
 
 
