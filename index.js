@@ -162,11 +162,37 @@ console.log(validParentheses("()"));
 function spacify(str) {
     var newStr = "";
     for (var i = 0; i < str.length; i++) {
-        newStr += str[i] + " ";
+        newStr += str[i] + "";
     }
     return newStr;
 }
 console.log(spacify("hello"));
+//function hexToDec(hex) to convert hex number from string to decimal
+//return a number
+function hexToDec(hex) {
+    var newNum = 0;
+    for (var i = 0; i < hex.length; i++) {
+        if (hex[i] === "A") {
+            newNum += 10 * Math.pow(16, hex.length - i - 1);
+        } else if (hex[i] === "B") {
+            newNum += 11 * Math.pow(16, hex.length - i - 1);
+        } else if (hex[i] === "C") {
+            newNum += 12 * Math.pow(16, hex.length - i - 1);
+        } else if (hex[i] === "D") {
+            newNum += 13 * Math.pow(16, hex.length - i - 1);
+        } else if (hex[i] === "E") {
+            newNum += 14 * Math.pow(16, hex.length - i - 1);
+        } else if (hex[i] === "F") {
+            newNum += 15 * Math.pow(16, hex.length - i - 1);
+        }
+        else {
+            newNum += parseInt(hex[i]) * Math.pow(16, hex.length - i - 1);
+        }
+    }
+    return newNum;
+}
+console.log(hexToDec("BCDE"));
+
 
 
 
