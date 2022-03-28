@@ -108,6 +108,77 @@ Array.prototype.remove_ = function(interger_list, values_list) {
     return newArray;
 }
 console.log([1, 2, 3, 4, 5, 6, 7, 8, 9, 10].remove_([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [1, 3, 5, 7, 9]));
+//function palindrome(num) to check if a number is a palindrome
+//return true if num is a palindrome
+//return false if num is not a palindrome or num is single digit
+//return "Not valid" if num is not a number or is less than 0
+function palindrome(num) {
+    if (isNaN(num) || num < 0) {
+        return "Not valid";
+    }
+    if (num < 10) {
+        return true;
+    }
+    var newNum = num;
+    var reverseNum = 0;
+    while (newNum > 0) {
+        reverseNum = reverseNum * 10 + newNum % 10;
+        newNum = Math.floor(newNum / 10);
+    }
+    if (num === reverseNum) {
+        return true;
+    }
+    return false;
+}
+console.log(palindrome(1221));
+//function validParentheses(parens) to check if parentheses are valid
+//return true if parentheses are valid
+//return false if parentheses are not valid
+//return "Not valid" if parens is not a string
+function validParentheses(parens) {
+    if (typeof parens !== "string") {
+        return "Not valid";
+    }
+    var count = 0;
+    for (var i = 0; i < parens.length; i++) {
+        if (parens[i] === "(") {
+            count++;
+        }
+        if (parens[i] === ")") {
+            count--;
+        }
+        if (count < 0) {
+            return false;
+        }
+    }
+    if (count === 0) {
+        return true;
+    }
+    return false;
+}
+console.log(validParentheses("()"));
+//function spacify(str) to return string with spaces between each character
+//return a string
+function spacify(str) {
+    var newStr = "";
+    for (var i = 0; i < str.length; i++) {
+        newStr += str[i] + " ";
+    }
+    return newStr;
+}
+console.log(spacify("hello"));
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
