@@ -537,40 +537,40 @@ console.log(person.sayHello()); */
 }
 
 );*/
- var books = [
-    {
-        title: "Ready Player One",
-        author: {
-            firstName: "Ernest",
-            lastName: "Cline"
-        }
-    },
-    {
-        title: "The Shining",
-        author: {
-            firstName: "Stephen",
-            lastName: "King"
-        }
-    },
-    {title: "The Martian",
-    author: {
-        firstName: "Andy",
-        lastName: "Weir"
-    }
-    },
-    {title: "The Hobbit",
-     author: {
-            firstName: "J.R.R",
-            lastName: "Tolkien"
-     }
-},
-    {title: "Green, Eggs, and Ham",
-    author: {
-        firstName: "Dr.",
-        lastName: "Suess"
-    }
-}
-]
+//  var books = [
+//     {
+//         title: "Ready Player One",
+//         author: {
+//             firstName: "Ernest",
+//             lastName: "Cline"
+//         }
+//     },
+//     {
+//         title: "The Shining",
+//         author: {
+//             firstName: "Stephen",
+//             lastName: "King"
+//         }
+//     },
+//     {title: "The Martian",
+//     author: {
+//         firstName: "Andy",
+//         lastName: "Weir"
+//     }
+//     },
+//     {title: "The Hobbit",
+//      author: {
+//             firstName: "J.R.R",
+//             lastName: "Tolkien"
+//      }
+// },
+//     {title: "Green, Eggs, and Ham",
+//     author: {
+//         firstName: "Dr.",
+//         lastName: "Suess"
+//     }
+// }
+// ]
 //create foreach loop that iterates through the books array
 //console.log the title and author of each book
 /* books.forEach(function (book) {
@@ -1761,15 +1761,26 @@ console.log(domainName("http://google.com")); */
     return newArr;
 }
 console.log(firstAndThird([0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); */
-function divisibleByThree(){
-    //iterates through 1 and 15 and returns the numbers divisible by 3
-    let divisibleByThree = [];
-    for (let i = 1; i <= 15; i++) {
-        if (i % 3 === 0) {
-            divisibleByThree.push(i);
+// function divisibleByThree(){
+//     //iterates through 1 and 15 and returns the numbers divisible by 3
+//     let divisibleByThree = [];
+//     for (let i = 1; i <= 15; i++) {
+//         if (i % 3 === 0) {
+//             divisibleByThree.push(i);
+//         }
+//     }
+//     return divisibleByThree;
+// }
+// divisibleByThree();
+// console.log(divisibleByThree());
+//function that that take in array(a) and a value(n) and returns every n elements from the array
+function everyNth(arr, n){
+    let newArr = [];
+    for (let i = 1; i < arr.length; i++) {
+        if (i % n === 0) {
+            newArr.push(arr[i]-1);
         }
     }
-    return divisibleByThree;
+    return newArr;
 }
-divisibleByThree();
-console.log(divisibleByThree());
+console.log(everyNth([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
