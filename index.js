@@ -1774,13 +1774,19 @@ console.log(firstAndThird([0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); */
 // divisibleByThree();
 // console.log(divisibleByThree());
 //function that that take in array(a) and a value(n) and returns every n elements from the array
-function everyNth(arr, n){
-    let newArr = [];
-    for (let i = 1; i < arr.length; i++) {
-        if (i % n === 0) {
-            newArr.push(arr[i]-1);
-        }
-    }
-    return newArr;
-}
-console.log(everyNth([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
+// function everyNth(arr, n){
+//     let newArr = [];
+//     for (let i = 1; i < arr.length; i++) {
+//         if (i % n === 0) {
+//             newArr.push(arr[i]-1);
+//         }
+//     }
+//     return newArr;
+// }
+// console.log(everyNth([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
+//function that removes first three characters from a string
+// function removeFirstThree(str){
+//     let newStr = str.slice(3);
+//     return newStr;
+// }
+// console.log(removeFirstThree("Hello"));
