@@ -1790,3 +1790,15 @@ console.log(firstAndThird([0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); */
 //     return newStr;
 // }
 // console.log(removeFirstThree("Hello"));
+//function that takes array and returns all object keys
+function allKey(arr) {
+    let keys = [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let key in arr[i]) {
+            keys.push(key);
+        }
+    }
+    return keys;
+
+}
+console.log(allKey([{ a: 1, b: 2, c: 3 }, { d: 4, e: 5, f: 6 }]));
